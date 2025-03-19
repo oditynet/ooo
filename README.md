@@ -84,7 +84,7 @@ size = 400 * 2 + 200 * 3 = 1400 Mb
  odity@viva  ~/bin/pack   main ± ls -l
 -rw-r--r-- 1 odity odity 209715200 мар 19 15:08 file3
 -rw-r--r-- 1 odity odity 419430400 мар 19 15:08 file4
--rw-r--r-- 1 odity odity 629145980 мар 19 15:08 out.ooo
+-rw-r--r-- 1 odity odity 1468007124 мар 19 15:08 out.ooo
 
  odity@viva  ~/bin/pack   main ± xz file3
  odity@viva  ~/bin/pack   main ± xz file4
@@ -93,5 +93,7 @@ size = 400 * 2 + 200 * 3 = 1400 Mb
  odity@viva  ~/bin/pack   main ± ls -l
 -rw-r--r-- 1 odity odity 31556 мар 19 15:08 file3.xz
 -rw-r--r-- 1 odity odity 62968 мар 19 15:08 file4.xz
--rw-r--r-- 1 odity odity 94480 мар 19 15:08 out.ooo.xz
+-rw-r--r-- 1 odity odity 220336 мар 19 15:08 out.ooo.xz
 ```
+
+Result: binary faile save is bad. Text file is good!
