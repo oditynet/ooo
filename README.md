@@ -69,3 +69,29 @@ Extract a file name t1:
 ooo -x out.ooo ext -f t1
 Файл ext/t1 восстановлен из копии 2
 ```
+
+# Sizing:
+```
+ odity@viva  ~/bin/pack   main ± dd if=/dev/zero of=file4 bs=1M count=400
+ odity@viva  ~/bin/pack   main ± dd if=/dev/zero of=file3 bs=1M count=200
+ odity@viva  ~/bin/pack   main ± ./ooo -c out.ooo -b 2 file4            
+ odity@viva  ~/bin/pack   main ± ./ooo -c out.ooo -b 3 file3
+```
+file4=400Mb
+file3=200Mb
+size = 400 * 2 + 200 * 3 = 1400 Mb
+```
+ odity@viva  ~/bin/pack   main ± ls -l
+-rw-r--r-- 1 odity odity 209715200 мар 19 15:08 file3
+-rw-r--r-- 1 odity odity 419430400 мар 19 15:08 file4
+-rw-r--r-- 1 odity odity 629145980 мар 19 15:08 out.ooo
+
+ odity@viva  ~/bin/pack   main ± xz file3
+ odity@viva  ~/bin/pack   main ± xz file4
+ odity@viva  ~/bin/pack   main ± xz out.ooo
+ 
+ odity@viva  ~/bin/pack   main ± ls -l
+-rw-r--r-- 1 odity odity 31556 мар 19 15:08 file3.xz
+-rw-r--r-- 1 odity odity 62968 мар 19 15:08 file4.xz
+-rw-r--r-- 1 odity odity 94480 мар 19 15:08 out.ooo.xz
+```
