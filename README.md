@@ -1,6 +1,18 @@
 # ooo
 This is a file packer with replica support. You add any files to the archive and assign the number of replicas. Each replica calculates the checksum, file rights and size. You can view the contents of the archive or delete a file from the archive. The most important thing.... If your disk sector is broken and after restoring the file system the sector has changed its contents, then when extracting the file from the archive, the checksum of the replica is checked and if it is broken, the file is extracted from the next replica.
 
+# Helper
+```
+./ooo
+Использование:
+Упаковка: ./16 -c <архив> -b <избыточность> <файлы...>
+Удаление: ./16 -d <архив> <файл>
+Верификация: ./16 -v <архив>
+Добавление: ./16 -a <архив> -b <избыточность> <файлы...>
+Распаковка: ./16 -x <архив> <директория> [-f <файл>]
+Список: ./16 -l <архив>
+```
+
 Create pack with 2 files: t1 - repl 2, t2 - repl 1 
 ```
 ooo -c out.ooo -b 2 t1 
