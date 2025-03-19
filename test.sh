@@ -22,5 +22,6 @@ done
 ./ooo -d out.ooo del/f$(shuf -i 1-10 -n 1).dat
 ./ooo -d out.ooo del/f$(shuf -i 1-10 -n 1).dat
 ./ooo -v out.ooo
+
+rm -rf del/*
 ./ooo -x out.ooo del
-#rm -rf del
