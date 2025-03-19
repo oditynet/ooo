@@ -1,7 +1,7 @@
 # ooo
 This is a file packer with replica support. You add any files to the archive and assign the number of replicas. Each replica calculates the checksum, file rights and size. You can view the contents of the archive or delete a file from the archive. The most important thing.... If your disk sector is broken and after restoring the file system the sector has changed its contents, then when extracting the file from the archive, the checksum of the replica is checked and if it is broken, the file is extracted from the next replica.
 
-Это упаковщик файлов с поддержкой реплик. Вы добавляете в архив лбые файлы и назначаете колчиство релик. Каждая реплика подсчитывае контрольную сумму,права на файл и размер. Вы можете посмотреть содержимое архива или удалить файл из архива.
+Это упаковщик файлов с поддержкой реплик. Вы добавляете в архив любые файлы и назначаете колчиство релик. Каждая реплика подсчитывае контрольную сумму,права на файл и размер. Вы можете посмотреть содержимое архива или удалить файл из архива.
 Самое важное....Если у вас бьется сектор диска и после восстановления файловой системы сектор изменил свое содержание, то при извлекании их архива файла проверяется контрольная сумма реплики и если она битая,то извлекается файл из следующей реплики.
 
 # Helper
