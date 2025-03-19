@@ -76,6 +76,9 @@ ooo -x out.ooo ext -f t1
 Файл ext/t1 восстановлен из копии 2
 ```
 
+backup system: sudo find /usr/ -type f -exec ooo -a /root/out.ooo -b 2 '{}' ';'
+
+
 # Sizing:
 ```
  odity@viva  ~/bin/pack   main ± dd if=/dev/zero of=file4 bs=1M count=400
