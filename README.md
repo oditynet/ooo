@@ -1,6 +1,6 @@
 # NEW:  in version 0.2 add:
 1) backup and restore header archive.
-2) compress and decompress packer.
+2) compress and decompress packer . алгоритм Хаффмана 
 ```
 compress: 88251 мар 20 20:46 out.ooA
 pack:     123950 мар 20 20:47 out.ooo
