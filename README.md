@@ -1,4 +1,42 @@
+# NEW:  in version 0.2 add:
+1) bacup and restore header archive.
+2) compress and decompress packer.
+```
+compress: 88251 мар 20 20:46 out.ooA
+pack:     123950 мар 20 20:47 out.ooo
+
+odity@viva  ~/bin/ooo  ./ooo -l out.ooo         
+Архив: out.ooo
+Файлов: 8
+Файл: test1
+Копий: 2
+  Копия 1: CRC32=7a556da4, Размер=1024, Смещение=12
+  Копия 2: CRC32=7a556da4, Размер=1024, Смещение=1036
+Файл: test2
+Копий: 1
+  Копия 1: CRC32=fb79f561, Размер=2048, Смещение=2060
+Файл: test3
+Копий: 1
+  Копия 1: CRC32=6c4a448a, Размер=3072, Смещение=4108
+Файл: ooo
+Копий: 1
+  Копия 1: CRC32=0e9b7423, Размер=38528, Смещение=7180
+Файл: ooo.c
+Копий: 1
+  Копия 1: CRC32=30d418d8, Размер=37122, Смещение=45708
+Файл: 1
+Копий: 1
+  Копия 1: CRC32=5a82fd08, Размер=4, Смещение=82830
+Файл: 2
+Копий: 1
+  Копия 1: CRC32=1564effa, Размер=4, Смещение=82834
+Файл: ooo1
+Копий: 1
+  Копия 1: CRC32=0e9b7423, Размер=38528, Смещение=82838
+```
+
 # ooo
+
 This is a file packer with replica support. You add any files to the archive and assign the number of replicas. Each replica calculates the checksum, file rights and size. You can view the contents of the archive or delete a file from the archive. The most important thing.... If your disk sector is broken and after restoring the file system the sector has changed its contents, then when extracting the file from the archive, the checksum of the replica is checked and if it is broken, the file is extracted from the next replica.
 
 Это упаковщик файлов с поддержкой реплик. Вы добавляете в архив любые файлы и назначаете колчиство релик. Каждая реплика подсчитывае контрольную сумму,права на файл и размер. Вы можете посмотреть содержимое архива или удалить файл из архива.
